@@ -41,7 +41,19 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { ClientesCrudComponent } from './views/clientes-crud/clientes-crud.component';
 import { EventosCrudComponent } from './views/eventos-crud/eventos-crud.component';
 import { CasaCrudComponent } from './views/casa-crud/casa-crud.component';
-import { VendaCrudComponent } from './views/venda-crud/venda-crud.component'
+import { VendaCrudComponent } from './views/venda-crud/venda-crud.component';
+import { ClientesUpdateComponent } from './components/cliente/clientes-update/clientes-update.component';
+import { ClientesDeleteComponent } from './components/cliente/clientes-delete/clientes-delete.component';
+import { ClientesReadComponent } from './components/cliente/clientes-read/clientes-read.component';
+import { ClientesCreateComponent } from './components/cliente/clientes-create/clientes-create.component';
+import { CasaUpdateComponent } from './components/casa/casa-update/casa-update.component';
+import { CasaDeleteComponent } from './components/casa/casa-delete/casa-delete.component';
+import { CasaReadComponent } from './components/casa/casa-read/casa-read.component';
+import { CasaCreateComponent } from './components/casa/casa-create/casa-create.component';
+import { EventoUpdateComponent } from './components/evento/evento-update/evento-update.component';
+import { EventoDeleteComponent } from './components/evento/evento-delete/evento-delete.component';
+import { EventoReadComponent } from './components/evento/evento-read/evento-read.component';
+import { EventoCreateComponent } from './components/evento/evento-create/evento-create.component'
 
 registerLocaleData(localePT);
 
@@ -63,7 +75,19 @@ registerLocaleData(localePT);
     ClientesCrudComponent,
     EventosCrudComponent,
     CasaCrudComponent,
-    VendaCrudComponent
+    VendaCrudComponent,
+    ClientesUpdateComponent,
+    ClientesDeleteComponent,
+    ClientesReadComponent,
+    ClientesCreateComponent,
+    CasaUpdateComponent,
+    CasaDeleteComponent,
+    CasaReadComponent,
+    CasaCreateComponent,
+    EventoUpdateComponent,
+    EventoDeleteComponent,
+    EventoReadComponent,
+    EventoCreateComponent
   ],
   imports: [
     BrowserModule,
