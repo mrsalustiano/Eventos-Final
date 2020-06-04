@@ -3,11 +3,13 @@ package com.qintess.eventos.api.dao;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.qintess.eventos.api.domain.Cliente;
 import com.qintess.eventos.api.domain.Espetaculo;
 import com.qintess.eventos.api.domain.Venda;
 
+@CrossOrigin("http://localhost:4200")
 @Repository
 public class VendaDaoImpl extends AbstractDao<Venda, Long> implements VendaDao {
 

@@ -53,7 +53,8 @@ import { EventoDeleteComponent } from './components/evento/evento-delete/evento-
 import { EventoReadComponent } from './components/evento/evento-read/evento-read.component';
 import { EventoCreateComponent } from './components/evento/evento-create/evento-create.component';
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
-import { EventoCrudComponent } from './views/evento-crud/evento-crud.component'
+import { EventoCrudComponent } from './views/evento-crud/evento-crud.component';
+
 
 registerLocaleData(localePT);
 
@@ -87,7 +88,8 @@ registerLocaleData(localePT);
     EventoReadComponent,
     EventoCreateComponent,
     ClienteCrudComponent,
-    EventoCrudComponent
+    EventoCrudComponent,
+    
   ],
   imports: [
     BrowserModule,

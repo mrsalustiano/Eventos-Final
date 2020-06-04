@@ -1,1 +1,73 @@
-<p>clientes-create works!</p>
+<mat-card>
+    <mat-card-title> Novo Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.nome" required name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="cliente.cpf" required name="cpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="email" matInput  placeholder="EMail" [(ngModel)]="cliente.email" required
+                name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Celular" [(ngModel)]="cliente.celular" required name="celular">
+        </mat-form-field>
+
+        <mat-form-field>
+        
+            <input type="date" matInput placeholder="Data de Nascimento dd/mm/aaaa" required [(ngModel)]="cliente.dataNascimento" name="dataNascimento">
+        </mat-form-field>
+
+
+           <mat-form-field >
+            <mat-label>Enter your password</mat-label>
+            <input type="password" matInput    placeholder="Password" [(ngModel)]="cliente.senhaCliente" name="senhaCliente"
+                required>
+           </mat-form-field>
+
+        <mat-form-field>
+            <input maxlength=9 matInput placeholder="CEP" [(ngModel)]="cliente.cep" name="cep" required>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input matInput placeholder="Logradouro" [(ngModel)]="cliente.logradouro" name="logradouro" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Numero" [(ngModel)]="cliente.numero" name="numero" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Complemento" [(ngModel)]="cliente.complemento" name="complemento">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Bairro" [(ngModel)]="cliente.bairro" name="bairro" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [(ngModel)]="cliente.cidade" name="cidade" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput maxlength=2 placeholder="UF" [(ngModel)]="cliente.uf" name="uf" required>
+        </mat-form-field>
+
+
+
+
+    </form>
+    <button mat-raised-button (click)="createCliente()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

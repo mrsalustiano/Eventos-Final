@@ -1,14 +1,17 @@
 package com.qintess.eventos.api.domain;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -39,6 +42,10 @@ public class Cliente extends AbstractEntity<Long> {
 	@Column(name = "email", nullable = false, length = 80, unique = true)
 	private String email;
 
+	
+	@Column(nullable = false, columnDefinition = "DATE")
+	@DateTimeFormat(iso = ISO.DATE, pattern = "")
+	private LocalDate dataNascimento;
 
 	@Column(name = "newsletter", nullable = false)
 	private Boolean newsletter;

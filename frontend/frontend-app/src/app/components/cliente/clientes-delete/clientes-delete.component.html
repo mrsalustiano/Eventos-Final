@@ -1,1 +1,26 @@
-<p>clientes-delete works!</p>
+<mat-card>
+    <mat-card-title> Excluir Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.nome" required name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="cliente.cpf" required name="cpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="email" matInput  placeholder="EMail" [(ngModel)]="cliente.email" required
+                name="email">
+        </mat-form-field>
+
+       
+    </form>
+    <button mat-raised-button (click)="deleteCliente()" color="warn">
+        Apagar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qintess.eventos.api.domain.Cliente;
 import com.qintess.eventos.api.rest.exception.BeanBadRequestException;
 import com.qintess.eventos.api.rest.exception.BeanNotFoundException;
-import com.qintess.eventos.api.rest.exception.ExceptionError;
 import com.qintess.eventos.api.service.ClienteService;
 
 @RestController
@@ -47,7 +46,7 @@ public class ClienteRest {
 		List<Cliente> cli = service.findByCpf(cliente.getCpf());
 		int soma = 0;
 		
-		for (Cliente cliente2 : cli) {
+		for (@SuppressWarnings("unused") Cliente cliente2 : cli) {
 			
 			soma = soma + 1;
 		}
@@ -57,9 +56,9 @@ public class ClienteRest {
 
 		}
 
-		Cliente save = new Cliente(cliente.getCelular(), cliente.getCpf(), cliente.getEmail(), cliente.getNewsletter(),
+		Cliente save = new Cliente(cliente.getCelular(), cliente.getCpf(), cliente.getEmail(), cliente.getDataNascimento(), cliente.getNewsletter(),
 				cliente.getNome(), cliente.getSenhaCliente(),cliente.getLogradouro(), cliente.getNumero(), cliente.getComplemento(), cliente.getBairro(), cliente.getCidade(), 
-				cliente.getUf(), cliente.getCep() );
+				cliente.getUf(), cliente.getCep()  );
 		System.out.println(save);
 
 		service.save(save);
