@@ -38,8 +38,6 @@ import localePT from '@angular/common/locales/pt';
 import  { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import { ClientesCrudComponent } from './views/clientes-crud/clientes-crud.component';
-import { EventosCrudComponent } from './views/eventos-crud/eventos-crud.component';
 import { CasaCrudComponent } from './views/casa-crud/casa-crud.component';
 import { VendaCrudComponent } from './views/venda-crud/venda-crud.component';
 import { ClientesUpdateComponent } from './components/cliente/clientes-update/clientes-update.component';
@@ -53,7 +51,9 @@ import { CasaCreateComponent } from './components/casa/casa-create/casa-create.c
 import { EventoUpdateComponent } from './components/evento/evento-update/evento-update.component';
 import { EventoDeleteComponent } from './components/evento/evento-delete/evento-delete.component';
 import { EventoReadComponent } from './components/evento/evento-read/evento-read.component';
-import { EventoCreateComponent } from './components/evento/evento-create/evento-create.component'
+import { EventoCreateComponent } from './components/evento/evento-create/evento-create.component';
+import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+import { EventoCrudComponent } from './views/evento-crud/evento-crud.component'
 
 registerLocaleData(localePT);
 
@@ -72,8 +72,6 @@ registerLocaleData(localePT);
     ProductRead2Component,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    ClientesCrudComponent,
-    EventosCrudComponent,
     CasaCrudComponent,
     VendaCrudComponent,
     ClientesUpdateComponent,
@@ -87,7 +85,9 @@ registerLocaleData(localePT);
     EventoUpdateComponent,
     EventoDeleteComponent,
     EventoReadComponent,
-    EventoCreateComponent
+    EventoCreateComponent,
+    ClienteCrudComponent,
+    EventoCrudComponent
   ],
   imports: [
     BrowserModule,
