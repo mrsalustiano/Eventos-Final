@@ -54,6 +54,8 @@ import { EventoReadComponent } from './components/evento/evento-read/evento-read
 import { EventoCreateComponent } from './components/evento/evento-create/evento-create.component';
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
 import { EventoCrudComponent } from './views/evento-crud/evento-crud.component';
+import { VendaReadComponent } from './components/venda/venda-read/venda-read.component';
+import { VendaCreateComponent } from './components/venda/venda-create/venda-create.component';
 
 
 registerLocaleData(localePT);
@@ -89,6 +91,8 @@ registerLocaleData(localePT);
     EventoCreateComponent,
     ClienteCrudComponent,
     EventoCrudComponent,
+    VendaReadComponent,
+    VendaCreateComponent,
     
   ],
   imports: [

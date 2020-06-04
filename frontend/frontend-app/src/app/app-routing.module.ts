@@ -12,6 +12,13 @@ import { ProductCrudComponent } from  './views/product-crud/product-crud.compone
 import { ClientesCreateComponent } from './components/cliente/clientes-create/clientes-create.component';
 import { ClientesUpdateComponent } from './components/cliente/clientes-update/clientes-update.component';
 import { ClientesDeleteComponent } from './components/cliente/clientes-delete/clientes-delete.component';
+import { CasaCreateComponent } from './components/casa/casa-create/casa-create.component';
+import { CasaUpdateComponent } from './components/casa/casa-update/casa-update.component';
+import { CasaDeleteComponent } from './components/casa/casa-delete/casa-delete.component';
+import { EventoCreateComponent } from './components/evento/evento-create/evento-create.component';
+import { EventoUpdateComponent } from './components/evento/evento-update/evento-update.component';
+import { EventoDeleteComponent } from './components/evento/evento-delete/evento-delete.component';
+import { VendaCreateComponent } from './components/venda/venda-create/venda-create.component';
 
 const routes: Routes = [
   { path: "products", component: ProductCrudComponent},
@@ -22,9 +29,21 @@ const routes: Routes = [
   { path: "clientes/create", component: ClientesCreateComponent},  
   { path: "clientes/update/:id", component: ClientesUpdateComponent},
   { path: "clientes/delete/:id", component: ClientesDeleteComponent},
+ 
   { path: "eventos", component: EventoCrudComponent},
+  { path: "eventos/create", component: EventoCreateComponent},  
+  { path: "eventos/update/:id", component: EventoUpdateComponent},
+  { path: "eventos/delete/:id", component: EventoDeleteComponent},
+
+ 
   { path: "casas", component: CasaCrudComponent},
+  { path: "casas/create", component: CasaCreateComponent},  
+  { path: "casas/update/:id", component: CasaUpdateComponent},
+  { path: "casas/delete/:id", component: CasaDeleteComponent},
+
   { path: "vendas", component: VendaCrudComponent},
+  { path: "vendas/create", component: VendaCreateComponent},  
+  
   { path: "" , component: HomeComponent },
   { path: "**" , redirectTo: '' }
   
