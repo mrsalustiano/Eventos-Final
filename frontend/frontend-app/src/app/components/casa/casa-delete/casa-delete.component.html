@@ -1,1 +1,26 @@
-<p>casa-delete works!</p>
+<mat-card>
+    <mat-card-title> Excluir Casa de Show</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="casa.nome" required name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CEP" [(ngModel)]="casa.cep" required name="cpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput  placeholder="Cidade" [(ngModel)]="casa.cidade" name="cidade">
+        </mat-form-field>
+
+       
+    </form>
+    <button mat-raised-button (click)="deleteCasa()" color="warn">
+        Apagar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+

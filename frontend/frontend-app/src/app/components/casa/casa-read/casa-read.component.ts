@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Casa } from '../casa';
+import { CasaService } from '../casa.service';
 
 @Component({
   selector: 'app-casa-read',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CasaReadComponent implements OnInit {
 
-  constructor() { }
+  casas: Casa[]
+  displayedColumns = ['id' ,  'nome' ,  'cidade', 'cep',  'uf', 'action'  ]
+
+  constructor(private  service: CasaService) { }
 
   ngOnInit(): void {
+    this.service.readCasa().subscribe(casas => {
+      this.casas = casas
+    })
   }
 
 }

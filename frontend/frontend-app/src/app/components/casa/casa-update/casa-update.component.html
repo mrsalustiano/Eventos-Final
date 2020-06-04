@@ -1,1 +1,50 @@
-<p>casa-update works!</p>
+<mat-card>
+    <mat-card-title> Nova Casa de Show</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="casa.nome" required name="nome">
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input maxlength=9 matInput placeholder="CEP" [(ngModel)]="casa.cep" name="cep" required>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input matInput placeholder="Logradouro" [(ngModel)]="casa.logradouro" name="logradouro" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Numero" [(ngModel)]="casa.numero" name="numero" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Complemento" [(ngModel)]="casa.complemento" name="complemento">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Bairro" [(ngModel)]="casa.bairro" name="bairro" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [(ngModel)]="casa.cidade" name="cidade" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput maxlength=2 placeholder="UF" [(ngModel)]="casa.uf" name="uf" required>
+        </mat-form-field>
+
+
+
+
+    </form>
+    <button mat-raised-button (click)="updateCasa()" color="primary">
+        Atualizar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+
