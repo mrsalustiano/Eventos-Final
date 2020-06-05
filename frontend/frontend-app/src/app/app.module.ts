@@ -2,6 +2,8 @@ import { from } from 'rxjs';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule , LOCALE_ID} from '@angular/core';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -50,6 +52,9 @@ import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.componen
 import { EventoCrudComponent } from './views/evento-crud/evento-crud.component';
 import { VendaReadComponent } from './components/venda/venda-read/venda-read.component';
 import { VendaCreateComponent } from './components/venda/venda-create/venda-create.component';
+import { FotoCasaComponent } from './components/casa/foto-casa/foto-casa.component';
+import { FotoEventoComponent } from './components/evento/foto-evento/foto-evento.component';
+
 
 
 registerLocaleData(localePT);
@@ -81,6 +86,8 @@ registerLocaleData(localePT);
     EventoCrudComponent,
     VendaReadComponent,
     VendaCreateComponent,
+    FotoCasaComponent,
+    FotoEventoComponent
     
   ],
   imports: [

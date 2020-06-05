@@ -1,3 +1,5 @@
+import { FotoCasaComponent } from './components/casa/foto-casa/foto-casa.component';
+import { FotoEventoComponent } from './components/evento/foto-evento/foto-evento.component';
 import { VendaReadComponent } from './components/venda/venda-read/venda-read.component';
 import { VendaCrudComponent } from './views/venda-crud/venda-crud.component';
 import { CasaCrudComponent } from './views/casa-crud/casa-crud.component';
@@ -29,12 +31,14 @@ const routes: Routes = [
   { path: "eventos/create", component: EventoCreateComponent},  
   { path: "eventos/update/:id", component: EventoUpdateComponent},
   { path: "eventos/delete/:id", component: EventoDeleteComponent},
+  { path: "eventos/foto/:id", component: FotoEventoComponent},
 
  
   { path: "casas", component: CasaCrudComponent},
   { path: "casas/create", component: CasaCreateComponent},  
   { path: "casas/update/:id", component: CasaUpdateComponent},
   { path: "casas/delete/:id", component: CasaDeleteComponent},
+  { path: "casas/foto:id", component: FotoCasaComponent},
 
   { path: "vendas", component: VendaCrudComponent},
   { path: "vendas/create", component: VendaCreateComponent},  
