@@ -1,3 +1,5 @@
+import { EventoService } from './../evento.service';
+import { Evento } from './../evento';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventoReadComponent implements OnInit {
 
-  constructor() { }
+  eventos: Evento[]
+  displayedColumns = ['id' ,  'nome' ,  'capacidade', 'descricao',   'faixaEtaria', 'dataEspetaculo', 'valor', 'casa', 'action'  ]
+
+  
+  constructor(private  service: EventoService) { }
 
   ngOnInit(): void {
+    this.service.readEvento().subscribe(eventos => {
+      this.eventos = eventos
+    })
   }
 
 }

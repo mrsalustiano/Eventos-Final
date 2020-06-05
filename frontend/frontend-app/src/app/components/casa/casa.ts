@@ -1,7 +1,7 @@
 export interface Casa {
     id?: number;
     nome: string;
-    imagemCasa?: BinaryType;
+    imagemCasa?: Blob;
     logradouro?: string;
     numero: number;
     complemento: string;

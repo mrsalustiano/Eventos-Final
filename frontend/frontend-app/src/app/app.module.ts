@@ -33,6 +33,7 @@ import { ProductRead2Component } from './components/product/product-read2/produc
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
 
 import localePT from '@angular/common/locales/pt';
 import  { registerLocaleData } from '@angular/common';
@@ -111,7 +112,8 @@ registerLocaleData(localePT);
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
   ],
   providers: [{
     provide: LOCALE_ID,
