@@ -39,6 +39,12 @@ export class VendaService {
     )
   }
 
+  readVenda(): Observable<Venda[]> {
+    return this.http.get<Venda[]>(this.baseUrl).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandle(e) )
+    )
+  }
 
 
   readVendaById(id: string): Observable<Evento> {
