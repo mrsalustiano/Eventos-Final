@@ -1,1 +1,46 @@
-<p>evento-update works!</p>
+<mat-card>
+    <mat-card-title> Editar Evento</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="evento.nome" required name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input maxlength=9 matInput placeholder="Faixa Etaria" [(ngModel)]="evento.faixaEtaria" name="faixaEtaria" required>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input type="date" matInput placeholder="Data Espetaculo" [(ngModel)]="evento.dataEspetaculo" name="dataEspetaculo" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input  matInput placeholder="valor" [(ngModel)]="evento.valor" name="Valor" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Capacidade" [(ngModel)]="evento.capacidade" name="capacidade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Descricao" [(ngModel)]="evento.descricao" name="descricao" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Casa de Show</mat-label>
+            <mat-select [(ngModel)]="idCasa"  [ngModelOptions]="{standalone: true}">
+              <mat-option *ngFor="let casa of casas" value="{{casa.id}}" name="casa">
+                {{casa.nome}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="updateEvento()" color="accent">
+        Atualizar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

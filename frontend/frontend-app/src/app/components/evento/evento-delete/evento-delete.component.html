@@ -1,1 +1,42 @@
-<p>evento-delete works!</p>
+<mat-card>
+    <mat-card-title> Remover Evento</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input readonly matInput placeholder="Nome" [(ngModel)]="evento.nome" required name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input readonly  maxlength=9 matInput placeholder="Faixa Etaria" [(ngModel)]="evento.faixaEtaria" name="faixaEtaria" required>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input readonly type="date" matInput placeholder="Data Espetaculo" [(ngModel)]="evento.dataEspetaculo" name="dataEspetaculo" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input readonly matInput placeholder="valor" [(ngModel)]="evento.valor" name="Valor" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input readonly matInput placeholder="Capacidade" [(ngModel)]="evento.capacidade" name="capacidade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput readonly placeholder="Descricao" [(ngModel)]="evento.descricao" name="descricao" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput readonly placeholder="Casa de Show" [(ngModel)]="evento.casa.nome" name="casa">
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="deleteEvento()" color="warn">
+        Remover
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+
