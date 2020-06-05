@@ -19,27 +19,29 @@ export class EventoCreateComponent implements OnInit {
     capacidade: null,
     destaque: null,
     imagemCasa: null,
-    casa: null,
+    casa: {
+      Casa: null
+    },
     descricao: '',
     nome: ''
   }
 
   casa: Casa[]
 
-  constructor(private service: EventoService, private serv: CasaService,  private router: Router) { }
+  constructor(private service: EventoService, private serv: CasaService, private router: Router) { }
 
   ngOnInit(): void {
     this.serv.readCasa().subscribe(casas => {
-      
+
       this.casa = casas
     })
- 
+
   }
 
   createEvento(): void {
- 
+
     this.service.createEvento(this.evento).subscribe(() => {
-     
+      console.log(this.evento)
       this.service.showMessage('Evento Criado com sucesso')
       this.router.navigate(['/eventos'])
     })

@@ -30,8 +30,8 @@
         <mat-form-field>
             <mat-label>Casa de Show</mat-label>
             <mat-select [(ngModel)]="evento.casa" [ngModelOptions]="{standalone: true}">
-              <mat-option *ngFor="let casas of casa" [(value)]="casas.id"  name="casa">
-                {{casas.nome}}
+              <mat-option *ngFor="let casa of casa" [(value)]="casa.id"  name="casa">
+                {{casa.nome}}
               </mat-option>
             </mat-select>
           </mat-form-field>

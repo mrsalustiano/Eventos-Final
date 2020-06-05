@@ -8,7 +8,7 @@ export interface Evento {
 	capacidade: number;
 	destaque: number;
 	imagemCasa: Blob;
-	casa: Casa 	;
+	casa: { Casa:Casa };
 	descricao: string;
 	nome: string;
 }

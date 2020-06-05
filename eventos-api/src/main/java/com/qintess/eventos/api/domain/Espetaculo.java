@@ -64,9 +64,9 @@ public class Espetaculo extends AbstractEntity<Long> {
 	@Transient //esse campo não será persistido no hibernate
 	private String imagemEncoded;
 	
-	@NotNull(message = "A Casa de Show é obrigatória")
+
 	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "casa_id", nullable = false)
+	@JoinColumn(name = "casa_id", nullable = true)
 	public Casa casa;
 
 	

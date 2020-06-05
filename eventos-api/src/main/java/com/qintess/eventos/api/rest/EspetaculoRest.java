@@ -50,7 +50,7 @@ public class EspetaculoRest {
 
 	@PostMapping
 	public ResponseEntity<Espetaculo> save(@RequestBody @Valid Espetaculo espetaculo) {
-
+		System.out.println(espetaculo);
 		Espetaculo save = new Espetaculo();
 		Casa casa   = casaService.findById(espetaculo.casa.getId());
 		if ( casa == null) {
