@@ -1,10 +1,10 @@
-export interface Cliente {
+export class Cliente {
 
     id?: number;
     celular: string;
     cpf: string;
     email: string;
-    dataNascimento: Date,
+    dataNascimento: Date;
 	newsletter: boolean;
 	nome: string;
 	senhaCliente: string;

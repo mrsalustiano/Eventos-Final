@@ -1,5 +1,5 @@
 import { Casa } from './../casa/casa';
-export interface Evento {
+export class Evento {
 
     id?: number;
     faixaEtaria: string;
@@ -8,7 +8,8 @@ export interface Evento {
 	capacidade: number;
 	destaque: number;
 	imagemCasa: Blob;
-	casa: { Casa:Casa };
+	casa: Casa ;
 	descricao: string;
 	nome: string;
+	
 }

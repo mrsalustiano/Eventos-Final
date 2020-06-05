@@ -5,10 +5,8 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
@@ -65,8 +63,7 @@ public class Espetaculo extends AbstractEntity<Long> {
 	private String imagemEncoded;
 	
 
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "casa_id", nullable = true)
+	@ManyToOne
 	public Casa casa;
 
 	

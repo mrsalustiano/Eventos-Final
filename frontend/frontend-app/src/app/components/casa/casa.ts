@@ -1,4 +1,4 @@
-export interface Casa {
+export class Casa {
     id?: number;
     nome: string;
     imagemCasa?: Blob;
@@ -9,4 +9,6 @@ export interface Casa {
     cep: string;
     cidade: string;
     uf: string;
+
+    
 }
