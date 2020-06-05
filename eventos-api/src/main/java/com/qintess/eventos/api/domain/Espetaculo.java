@@ -39,7 +39,7 @@ public class Espetaculo extends AbstractEntity<Long> {
 	private String faixaEtaria;
 
 	@NotNull(message = "A data é obrigatória")
-	@Future(message = "A Data deve ser maior que a data de hoje")
+	//@Future(message = "A Data deve ser maior que a data de hoje")
 	@Column(nullable = false, columnDefinition = "DATE")
 	@DateTimeFormat(iso = ISO.DATE, pattern = "")
 	private LocalDate dataEspetaculo;

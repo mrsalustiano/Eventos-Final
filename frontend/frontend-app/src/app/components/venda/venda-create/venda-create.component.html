@@ -1,1 +1,40 @@
-<p>venda-create works!</p>
+
+<mat-card>
+    <mat-card-title> Nova Compra</mat-card-title>
+    <form>
+
+
+        <mat-form-field>
+            <mat-label>Cliente</mat-label>
+            <mat-select [(ngModel)]="idCliente" [ngModelOptions]="{standalone: true}">
+                <mat-option *ngFor="let cliente of clientes" value="{{cliente.id}}" name="cliente">
+                    {{cliente.nome}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Evento</mat-label>
+            <mat-select [(ngModel)]="idEvento" [ngModelOptions]="{standalone: true}">
+                <mat-option *ngFor="let evento of eventos" value="{{evento.id}}" name="evento">
+                    Nome: {{evento.nome}} | Data :  {{ evento.dataEspetaculo | date: 'shortDate'}} |
+                    Valor:  {{evento.valor | currency: 'BRL'}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+
+        <mat-form-field>
+            <input matInput type="number" placeholder="Quantidade" [(ngModel)]="venda.quantidade" name="capacidade">
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="createVenda()" color="primary">
+        Confirmar Compra
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

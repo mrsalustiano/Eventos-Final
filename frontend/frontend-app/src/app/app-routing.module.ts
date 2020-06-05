@@ -1,3 +1,4 @@
+import { VendaReadComponent } from './components/venda/venda-read/venda-read.component';
 import { VendaCrudComponent } from './views/venda-crud/venda-crud.component';
 import { CasaCrudComponent } from './views/casa-crud/casa-crud.component';
 import { EventoCrudComponent } from './views/evento-crud/evento-crud.component';
@@ -37,6 +38,8 @@ const routes: Routes = [
 
   { path: "vendas", component: VendaCrudComponent},
   { path: "vendas/create", component: VendaCreateComponent},  
+  { path: "vendas/lista", component: VendaReadComponent},  
+  
   
   { path: "" , component: HomeComponent },
   { path: "**" , redirectTo: '' }

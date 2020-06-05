@@ -3,9 +3,9 @@ import { Evento } from './../evento/evento';
 export class Venda {
    
 	cliente: Cliente;
-	evento: Evento;	
+	espetaculo: Evento;	
 	quantidade: number;
-    valor: number;
+    valor?: number;
     
     
 }

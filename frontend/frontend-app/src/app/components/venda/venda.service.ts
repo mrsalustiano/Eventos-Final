@@ -26,7 +26,8 @@ export class VendaService {
   }
 
   errorHandle(e: any): Observable<any> {
-    this.showMessage('Ocorreu um Erro' + e, true);
+    console.log(e);
+    this.showMessage('Ocorreu um Erro' , true);
     return EMPTY;
 
   }

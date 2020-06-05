@@ -13,3 +13,8 @@ table{
 .delete > i{
     color: brown;
 }
+
+
+.delete {
+    margin-right: 40px;
+}

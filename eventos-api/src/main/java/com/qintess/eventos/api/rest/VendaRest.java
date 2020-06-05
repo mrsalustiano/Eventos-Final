@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qintess.eventos.api.domain.Cliente;
 import com.qintess.eventos.api.domain.Espetaculo;
 import com.qintess.eventos.api.domain.Venda;
+import com.qintess.eventos.api.rest.exception.BeanNotFoundException;
 import com.qintess.eventos.api.service.ClienteService;
 import com.qintess.eventos.api.service.EspetaculoService;
 import com.qintess.eventos.api.service.VendaService;
@@ -37,7 +38,7 @@ public class VendaRest {
 	
 	@PostMapping
 	@Transactional
-	public ResponseEntity<String> save(@RequestBody @Valid  Venda venda){
+	public ResponseEntity<Venda> save(@RequestBody @Valid  Venda venda){
 		
 			Cliente cli = cliService.findById(venda.getCliente().getId()) ;
 	
@@ -56,7 +57,8 @@ public class VendaRest {
 			}
 			
 			if (qtdJaVendida > 3 ) {
-				return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Quantidade Excedida, somente 4 ingressos por Show para cada Cliente");
+				
+				throw new BeanNotFoundException("Quantidade Excedida, somente 4 ingressos por Show para cada Cliente");
 			}
 			
 			qtd = venda.getQuantidade();
@@ -65,7 +67,7 @@ public class VendaRest {
 			qtd = qtdJaVendida + qtd;
 			
 			if (qtd > 4) {
-				return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Limite de ingresso excedido somente 4 por evento por cliente");
+				throw new BeanNotFoundException("Limite de ingresso excedido somente 4 por evento por cliente");
 				
 			}
 			
@@ -75,7 +77,7 @@ public class VendaRest {
 			capacidade = (capacidade - venda.getQuantidade());
 		
 			if (capacidade < 0) {
-				return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Quantidade de ingresso maior que disponivel");
+				throw new BeanNotFoundException("Quantidade de ingresso maior que disponivel");
 
 
 			} else {
@@ -90,11 +92,11 @@ public class VendaRest {
 
 				service.save(venda);
 				espService.update(esp);
-				return ResponseEntity.status(HttpStatus.OK).body("Venda efetuada com sucesso");
+				return ResponseEntity.status(HttpStatus.CREATED).body(venda);
 			} else {
 				service.update(venda);
 				espService.update(esp);
-				return ResponseEntity.status(HttpStatus.OK).body("Venda efetuada com sucesso");
+				return ResponseEntity.status(HttpStatus.CREATED).body(venda);
 			}
 				
 	
